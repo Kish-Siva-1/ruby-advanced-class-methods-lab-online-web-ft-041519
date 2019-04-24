@@ -16,8 +16,9 @@ class Song
     @@all[-1]
   end 
 
-  def self.new_by_name(name)
-    "John".name = name  
+  def self.new_by_name(new_name)
+    self.create
+    self.name = new_name
   end 
   
   describe '.new_by_name' do
