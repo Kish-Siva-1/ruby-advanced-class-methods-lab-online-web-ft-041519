@@ -20,7 +20,8 @@ describe "Song Class Methods" do
 
   describe '.create_by_name' do
     it 'instantiates and saves a song with a name property' do
-      song = Song.create_by_name("Blank Space")
+      song = Song.create_by_name("Blank Space") 
+      
       expect(song.name).to eq("Blank Space")
       expect(Song.all).to include(song)
     end
