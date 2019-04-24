@@ -29,18 +29,9 @@ class Song
     song.name = new_name 
     song
   end  
-  
-  describe '.create_by_name' do
-    it 'instantiates and saves a song with a name property' do
-      song = Song.create_by_name("Blank Space")
 
-      expect(song.name).to eq("Blank Space")
-      expect(Song.all).to include(song)
-    end
-  end
-
-  def self.find_by_name
-    
+  def self.find_by_name(find_name)
+    self.all.find{|value| find_name} 
   end
 
   describe '.find_by_name' do
