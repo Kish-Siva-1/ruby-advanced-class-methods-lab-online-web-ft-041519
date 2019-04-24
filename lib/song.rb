@@ -31,7 +31,7 @@ class Song
   end  
 
   def self.find_by_name(find_name)
-    self.all.find{|value| find_name==} 
+    self.all.find{|value| find_name==value} 
   end
 
   describe '.find_by_name' do
