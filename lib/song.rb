@@ -23,8 +23,7 @@ class Song
   end 
 
   def self.new_by_name(new_name)
-    self.new(new_name)
-    binding.pry
+    rand = self.new(new_name)
   end 
   
   describe '.new_by_name' do
