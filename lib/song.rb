@@ -34,21 +34,13 @@ class Song
     self.all.find{|value| find_name==value.name} 
   end
 
-  describe '.find_by_name' do
-    it 'can find a song present in @@all by name' do
-      song_1 = Song.create_by_name("Blank Space")
-      song_2 = Song.create_by_name("Hello")
-      song_3 = Song.create_by_name("Hotline Bling")
-
-      expect(Song.find_by_name("Hello")).to eq(song_2)
-    end
-
-    it 'returns falsey when a song name is not present in @@all' do
-      expect(Song.find_by_name("Just The Way You Are")).to be_falsey
-    end
-  end
-
-  def self.find_or_create_by_name
+  def self.find_or_create_by_name(new_name)
+    
+    if self.find_by_name(new_name)
+      self.find_by_name(new_name)
+    else 
+      self.create_by_name
+    end 
     
   end
   
