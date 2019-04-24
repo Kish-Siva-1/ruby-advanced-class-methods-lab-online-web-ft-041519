@@ -1,6 +1,6 @@
 class Song 
 
-  def create 
+  def self.create 
     
   end 
   
@@ -12,9 +12,9 @@ class Song
     end
   end
   
-  def self.create
+  def self.new_by_name
     
-  end
+  end 
   
   describe '.new_by_name' do
     it 'instantiates a song with a name property' do
@@ -23,10 +23,6 @@ class Song
       expect(song.name).to eq("Blank Space")
     end
   end
-  
-  def self.new_by_name
-    
-  end 
   
   def self.create_by_name
     
