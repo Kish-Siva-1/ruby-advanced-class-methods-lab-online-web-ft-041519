@@ -5,8 +5,8 @@ class Song
   
   @@all = []
   
-  def initialize(name="")
-    @name = name
+  def initialize(new_name)
+    @name = new_name
   end 
   
   def self.all
