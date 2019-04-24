@@ -15,15 +15,7 @@ class Song
     @@all << self.new
     @@all[-1]
   end 
-  
-  describe '.create' do
-    it 'instantiates and saves the song, and it returns the new song that was created' do
-      song = Song.create
-      expect(song).to be_a(Song)
-      expect(Song.all).to include(song)
-    end
-  end
-  
+
   def self.new_by_name
     
   end 
