@@ -24,6 +24,7 @@ class Song
 
   def self.new_by_name(new_name)
     rand = self.new(new_name)
+    binding.pry
   end 
   
   describe '.new_by_name' do
