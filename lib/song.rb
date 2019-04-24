@@ -1,11 +1,27 @@
 class Song 
-  
-  def initialize 
+
+  def create 
     
   end 
   
+  describe '.create' do
+    it 'instantiates and saves the song, and it returns the new song that was created' do
+      song = Song.create
+      expect(song).to be_a(Song)
+      expect(Song.all).to include(song)
+    end
+  end
+  
   def self.create
     
+  end
+  
+  describe '.new_by_name' do
+    it 'instantiates a song with a name property' do
+      song = Song.new_by_name("Blank Space")
+
+      expect(song.name).to eq("Blank Space")
+    end
   end
   
   def self.new_by_name
