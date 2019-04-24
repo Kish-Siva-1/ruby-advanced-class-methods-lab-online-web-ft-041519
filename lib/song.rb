@@ -11,8 +11,9 @@ class Song
     self.class.all << self
   end
   
-  def self.create(name)
-    @@all << self.name
+  def self.create
+    self.class.save
+    
   end 
   
   describe '.create' do
