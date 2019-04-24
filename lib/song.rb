@@ -25,7 +25,7 @@ class Song
   def self.new_by_name(new_name)
     rand = self.new
     rand.name = new_name
-    self = rand
+    self.name = rand.name
   end 
   
   describe '.new_by_name' do
