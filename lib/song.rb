@@ -109,8 +109,8 @@ class Song
     end
   end
 
-  def self.find_by_name
-    
+  def self.destroy_all
+      
   end
   
   describe '.destroy_all' do
