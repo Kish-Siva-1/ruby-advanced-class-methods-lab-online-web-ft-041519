@@ -44,32 +44,10 @@ class Song
     
   end
   
-  describe '.find_or_create_by_name' do
-    it 'invokes .find_by_name and .create_by_name instead of repeating code' do
-      expect(Song).to receive(:find_by_name).at_least(1).times
-      expect(Song).to receive(:create_by_name).at_least(1).times
-
-      Song.find_or_create_by_name("Alison")
-    end
-
-    it 'returns the existing Song object (doesn\'t create a new one) when provided the title of an existing Song' do
-      song_1 = Song.find_or_create_by_name("Sometimes")
-      song_2 = Song.find_or_create_by_name("Sometimes")
-
-      expect(song_1).to eq(song_2)
-    end
-    
-    it 'creates a new Song object with the provided title if one doesn\'t already exist' do
-      blank_space = Song.find_by_name("Blank Space")
-      expect(blank_space).to be(nil)
-
-      blank_space = Song.find_or_create_by_name("Blank Space")
-      expect(blank_space.name).to eq("Blank Space")
-    end
-  end
   def self.alphabetical
-    
+    self.all.sort 
   end
+  
   describe '.alphabetical' do
     it 'returns all the song instances in alphabetical order by song name' do
       song_1 = Song.create_by_name("Thriller")
