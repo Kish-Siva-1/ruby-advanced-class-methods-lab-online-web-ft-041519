@@ -5,10 +5,6 @@ class Song
   
   @@all = []
   
-  def initialize(new_name)
-    @name = new_name
-  end 
-  
   def self.all
     @@all
   end
@@ -23,7 +19,7 @@ class Song
   end 
 
   def self.new_by_name(new_name)
-    @name = new_name
+    song = self.create
     self.new(new_name)
   end 
   
