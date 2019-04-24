@@ -5,9 +5,9 @@ class Song
   
   @@all = []
   
-  #def initialize(name)
-  #  @name = name
-  #end 
+  def initialize(name)
+    @name = name
+  end 
   
   def self.all
     @@all
@@ -23,9 +23,7 @@ class Song
   end 
 
   def self.new_by_name(new_name)
-    rand = self.new
-    rand.name = new_name
-    self.name = rand.name
+    self.new(new_name)
   end 
   
   describe '.new_by_name' do
