@@ -1,7 +1,10 @@
 class Song 
-
+  attr_accessor 
+  
+  @@all = []
+  
   def self.create 
-    
+    @@all << self.song
   end 
   
   describe '.create' do
