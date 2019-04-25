@@ -45,7 +45,8 @@ class Song
   end
   
   def self.alphabetical
-    
+    self.each.
+  
   end
   
   describe '.alphabetical' do
