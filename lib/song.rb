@@ -49,9 +49,9 @@ class Song
   end
   
   def self.new_from_filename(new_name)
-    new_name.split(Regexp.union([" - ", "."]))
-    song.name = 
-    song.artist_name = 
+    name_array = new_name.split(Regexp.union([" - ", "."]))
+    song.name = name_array[2] 
+    song.artist_name = name_array[1]
   end
   
   describe '.new_from_filename' do
