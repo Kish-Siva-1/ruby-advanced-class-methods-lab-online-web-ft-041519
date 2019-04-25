@@ -50,7 +50,7 @@ class Song
   
   def self.new_from_filename(new_name)
     name_array = new_name.split(Regexp.union([" - ", "."]))
-    song.name = name_array[1] 
+    song = find_or_create_by_name(name_array[1])
     song.artist_name = name_array[0]
   end
   
