@@ -49,7 +49,7 @@ class Song
   end
   
   def self.new_from_filename(new_name)
-    new_name.split([" - ","."])
+    new_name.split(Regexp.union([" - ", "."]))
     song.name = 
     song.artist_name = 
   end
