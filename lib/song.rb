@@ -27,7 +27,6 @@ class Song
   def self.create_by_name(new_name)
     song = self.create
     song.name = new_name 
-    binding.pry
     song
   end  
 
@@ -40,9 +39,7 @@ class Song
     if self.find_by_name(new_name)
       self.find_by_name(new_name)
     else 
-      binding.pry
       self.create_by_name(new_name)
-      binding.pry
     end 
     
   end
