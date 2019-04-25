@@ -66,10 +66,4 @@ class Song
       @@all.clear
   end
   
-  describe '.destroy_all' do
-    it 'clears all the song instances from the @@all array' do
-      Song.destroy_all
-      expect(Song.all).to eq([])
-    end
-  end
 end
