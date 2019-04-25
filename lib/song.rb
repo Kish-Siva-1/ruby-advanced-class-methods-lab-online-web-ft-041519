@@ -45,13 +45,7 @@ class Song
   end
   
   def self.alphabetical
-    song_names = []
-    i=0
-    self.all.each do |song|
-      song_names[i] = song.name
-      i+=1
-    end 
-    song_names.sort
+    self.all.sort
   end
   
   describe '.alphabetical' do
