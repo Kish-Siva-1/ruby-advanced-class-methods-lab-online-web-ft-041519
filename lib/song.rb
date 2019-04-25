@@ -48,8 +48,10 @@ class Song
     self.all.sort_by{|song| song.name}
   end
   
-  def self.new_from_filename
-    
+  def self.new_from_filename(new_name)
+    new_name.split([" - ","."])
+    song.name = 
+    song.artist_name = 
   end
   
   describe '.new_from_filename' do
