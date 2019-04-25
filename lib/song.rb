@@ -55,8 +55,11 @@ class Song
     song
   end
   
-  def self.create_from_filename
-    
+  def self.create_from_filename(new_name)
+    name_array = new_name.split(Regexp.union([" - ", "."]))
+    song = find_or_create_by_name(name_array[1])
+    song.artist_name = name_array[0]
+    song
   end
   
   describe '.create_from_filename' do
